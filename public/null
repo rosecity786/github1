@@ -1,0 +1,45 @@
+User::all();
+Post::all();
+Calendar::create('Laracon online')
+    ->event(Event::create('Creating calender feeds')
+        ->startsAt(new DateTime('6 March 2019 15:00'))
+        ->endsAt(new DateTime('6 March 2019 16:00'))
+    )
+    ->get();
+use Spatie\IcalendarGenerator\Components\Calendar;
+use Spatie\IcalendarGenerator\Components\Event;
+ 
+Calendar::create('Laracon online')
+    ->event(Event::create('Creating calender feeds')
+        ->startsAt(new DateTime('6 March 2019 15:00'))
+        ->endsAt(new DateTime('6 March 2019 16:00'))
+    )
+    ->get();
+Menu::new()
+    ->add(Link::to('/', 'Home'))
+    ->add(Link::to('/about', 'About'))
+    ->add(Link::to('/contact', 'Contact'))
+    ->add(Html::empty())
+    ->render();
+html()->input('name')
+html()->input('name')
+use Spatie\TranslationLoader\LanguageLine;
+
+LanguageLine::create([
+   'group' => 'validation',
+   'key' => 'required',
+   'text' => ['en' => 'This is a required field', 'nl' => 'Dit is een verplicht veld'],
+]);
+
+trans('validation.required');
+use Spatie\TranslationLoader\LanguageLine;
+
+LanguageLine::create([
+   'group' => 'validation',
+   'key' => 'required',
+   'text' => ['en' => 'This is a required field', 'nl' => 'Dit is een verplicht veld'],
+]);
+
+app()->setLocale('nl');
+
+trans('validation.required');
